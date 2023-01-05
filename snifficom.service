@@ -1,0 +1,10 @@
+[Unit]
+Description=ATU ICOM 
+After=network.target
+[Service]
+Restart=on-failure
+WorkingDirectory=/home/pi
+ExecStart=/usr/local/bin/snifficom.py
+User=pi
+[Install]
+WantedBy=multi-user.target
